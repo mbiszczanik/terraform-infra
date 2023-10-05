@@ -1,8 +1,8 @@
 # Variables for main.tf
 
-variable "tags" {
-  description = "Tags"
-}
+# variable "tags" {
+#   description = "Tags"
+# }
 
 variable "location" {
   description = "The Azure region which contains all resources"
