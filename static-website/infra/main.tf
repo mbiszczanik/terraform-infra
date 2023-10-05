@@ -1,7 +1,7 @@
 # Resource Group
-resource "azurerm_resource_group" "resourceGroup" {
-  name     = "core-weu-rg01"
-  location = "westeurope"
+resource "azurerm_resource_group" "resource_group" {
+  name     = var.resource_group_name
+  location = var.location
 
   tags = {
     Environment    = "D"
@@ -12,9 +12,9 @@ resource "azurerm_resource_group" "resourceGroup" {
 
 # Storage account
 resource "azurerm_storage_account" "storageAccount" {
-  name                     = "coreweust01"
-  resource_group_name      = azurerm_resource_group.resourceGroup.name
-  location                 = azurerm_resource_group.resourceGroup.location
+  name                     = var.storage_account_name
+  resource_group_name      = var.resource_group_name
+  location                 = var.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
   account_kind             = "StorageV2"
@@ -32,10 +32,10 @@ resource "azurerm_storage_account" "storageAccount" {
 
 # Container
 resource "azurerm_storage_blob" "storageBlob" {
-  name                   = "index.html"
-  storage_account_name   = azurerm_storage_account.storageAccount.name
+  name                   = var.index_document
+  storage_account_name   = var.storage_account_name
   storage_container_name = "$web"
   type                   = "Block"
   content_type           = "text/html"
-  source_content         = "<h1> Test website </h1>"
+  source_content         = var.source_content
 }
