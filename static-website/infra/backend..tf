@@ -8,10 +8,10 @@
 # Add storage accounts from code
 
 terraform {
-    backend "azurerm" {
-        resource_group_name = "test-tf-rg"
-        storage_account_name = "testtfst12"
-        container_name = "testtfcontainer"
-        key = "terraform.tfstate"
-    }
+  backend "azurerm" {
+    resource_group_name  = "test-tf-rg"
+    storage_account_name = "testtfst12"
+    container_name       = "testtfcontainer"
+    key                  = "terraform.tfstate"
+  }
 }

@@ -37,5 +37,5 @@ resource "azurerm_storage_blob" "storageBlob" {
   storage_container_name = "$web"
   type                   = "Block"
   content_type           = "text/html"
-  source_content = "<h1> Test website </h1>"
+  source_content         = "<h1> Test website </h1>"
 }
