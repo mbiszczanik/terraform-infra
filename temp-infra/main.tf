@@ -1,13 +1,13 @@
-provider "azurerm" {
-  features {
-
-  }
-}
-
 # Resource Group
 resource "azurerm_resource_group" "resourceGroup" {
   name     = "core-weu-rg01"
   location = "westeurope"
+
+  tags = {
+    Environment    = "D"
+    Infrastructure = "Core"
+    Location       = "West Europe"
+  }
 }
 
 # Storage account
