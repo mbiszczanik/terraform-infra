@@ -10,6 +10,7 @@
 # Directories
 .terraform/
 .vagrant/
+.idea/
 
 # SSH Keys
 *.pem
