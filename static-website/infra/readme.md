@@ -1,6 +1,6 @@
-## AKS Lab
+## Static Website Lab
 
-This lab demonstrates how to deploy an Azure Kubernetes Service (AKS) cluster using Terraform. It is intended for testing, learning, and portfolio demonstration.
+This lab demonstrates how to deploy a static website using Azure Storage and Terraform. It is intended for testing, learning, and portfolio demonstration.
 
 ### Prerequisites
 - Azure CLI
@@ -21,13 +21,12 @@ terraform destroy
 ```
 
 ### Outputs
-- AKS cluster name
-- Resource group
-- DNS prefix
+- Storage account name
+- Static website endpoint
 
 ### Portfolio & Demonstration Value
 This lab demonstrates:
-- Automated AKS deployment with Terraform
+- Automated static website deployment with Terraform
 - Use of variables and outputs
 - Azure resource provisioning best practices
 - Modular and reusable code

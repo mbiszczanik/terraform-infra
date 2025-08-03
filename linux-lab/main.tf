@@ -12,7 +12,7 @@ provider "azurerm" {
   features {}
 }
 
-# Resource Group
+# Resource Group for Linux Lab
 resource "azurerm_resource_group" "D-LinuxLab-NEu-RG01" {
   name     = "D-LinuxLab-NEu-RG01"
   location = "North Europe"
@@ -23,7 +23,7 @@ resource "azurerm_resource_group" "D-LinuxLab-NEu-RG01" {
   }
 }
 
-# VNet for networking purposes
+# Virtual Network for Linux Lab
 resource "azurerm_virtual_network" "D-LinuxLab-NEu-VNet01" {
   name                = "D-LinuxLab-NEu-VNet01"
   resource_group_name = azurerm_resource_group.D-LinuxLab-NEu-RG01.name

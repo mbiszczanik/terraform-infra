@@ -1,0 +1,3 @@
+# Example variables for AKS Lab
+node_count = 1
+# Add other variables as needed
