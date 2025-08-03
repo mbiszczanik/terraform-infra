@@ -1,6 +1,6 @@
-## AKS Lab
+## Linux Lab
 
-This lab demonstrates how to deploy an Azure Kubernetes Service (AKS) cluster using Terraform. It is intended for testing, learning, and portfolio demonstration.
+This lab provisions a Linux VM environment in Azure using Terraform. It is designed for testing, learning, and portfolio demonstration.
 
 ### Prerequisites
 - Azure CLI
@@ -21,13 +21,14 @@ terraform destroy
 ```
 
 ### Outputs
-- AKS cluster name
-- Resource group
-- DNS prefix
+- Resource group name
+- Virtual network name
+- Subnet name
+- (Add more as needed)
 
 ### Portfolio & Demonstration Value
 This lab demonstrates:
-- Automated AKS deployment with Terraform
+- Automated VM and network provisioning with Terraform
 - Use of variables and outputs
 - Azure resource provisioning best practices
 - Modular and reusable code

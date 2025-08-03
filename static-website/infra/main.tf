@@ -1,4 +1,4 @@
-# Resource Group
+# Resource Group for Static Website
 resource "azurerm_resource_group" "resource_group" {
   name     = var.resource_group_name
   location = var.location
@@ -10,7 +10,7 @@ resource "azurerm_resource_group" "resource_group" {
   }
 }
 
-# Storage account
+# Storage account for static website hosting
 resource "azurerm_storage_account" "storageAccount" {
   name                     = var.storage_account_name
   resource_group_name      = var.resource_group_name
@@ -30,7 +30,7 @@ resource "azurerm_storage_account" "storageAccount" {
   }
 }
 
-# Container
+# Upload index.html as a blob to the $web container
 resource "azurerm_storage_blob" "storageBlob" {
   name                   = var.index_document
   storage_account_name   = var.storage_account_name

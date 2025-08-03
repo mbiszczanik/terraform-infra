@@ -1,0 +1,6 @@
+# Example variables for Static Website Lab
+resource_group_name = "demo-rg"
+location = "West Europe"
+storage_account_name = "demostorageacct"
+index_document = "index.html"
+source_content = "<h1>Hello, World!</h1>"
